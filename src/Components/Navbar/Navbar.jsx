@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "/src/assets/logo.png";
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 border-gray-200 dark:bg-gray-800 dark:border-gray-700 z-50">
+    <nav className="bg-gray-800 border-gray-200 dark:bg-gray-800 dark:border-gray-700">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3">
           <Link to="/">
@@ -18,9 +18,9 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={`flex-grow flex justify-center ${isOpen? "block" : "hidden"} md:block md:w-auto`} id="navbar-multi-level">
-          <ul className="flex flex-col md:flex-row font-medium p-4 md:p-0 mt-4 border border-gray-600 rounded-lg bg-gray-800 md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-800 dark:bg-gray-800 md:dark:bg-gray-800 dark:border-gray-800">
+          <ul className="justify-center flex flex-col md:flex-row font-medium p-4 md:p-0 mt-4 border border-gray-600 rounded-lg bg-gray-800 md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-800 dark:bg-gray-800 md:dark:bg-gray-800 dark:border-gray-800">
             <li>
-              <Link to="/" className="block py-2 px-3 text-white bg-grey-600 rounded md:bg-transparent md:text-white-700 md:p-0 md:dark:text-white dark:bg-grey-100 md:dark:bg-transparent" aria-current="page">Accueil</Link>
+              <Link to="/" className="block py-2 px-3 text-white rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Accueil</Link>
             </li>
             <li>
               <Link to="/hebergement" className="block py-2 px-3 text-white rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Hébergements</Link>
