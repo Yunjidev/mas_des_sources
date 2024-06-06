@@ -3,6 +3,7 @@ import { useState } from 'react';
 import VerticalImage from '../../assets/Loisirs/ParcGrotte/grotte1.jpg';
 import SquareImage1 from '../../assets/Loisirs/ParcGrotte/grotte2.jpg';
 import SquareImage2 from '../../assets/Loisirs/ParcGrotte/grotte3.jpg';
+import { Link } from 'react-router-dom';
 
 const ParcGrotte = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,13 @@ const ParcGrotte = () => {
 
   return (
     <div className="max-w-7xl mx-auto bg-white shadow-lg p-6 flex flex-col gap-7 mb-10 mt-10">
+      <div className="flex flex-col gap-4">
+        <div className="flex gap-4 justify-center">
+          <Link to="/randonnée" className="text-blue-600 hover:text-blue-800 visited:text-blue-700">Randonnée</Link>
+          <Link to="/chateaux-musées" className="text-blue-600 hover:text-blue-800 visited:text-blue-700">Châteaux et Musées</Link>
+          <Link to="/activités-aquatique" className="text-blue-600 hover:text-blue-800 visited:text-blue-700">Activités Aquatiques</Link>
+        </div>
+      </div>
       <div className="flex flex-col md:flex-row gap-6">
         <div className="w-full md:w-1/3 flex flex-col gap-4">
           <img src={VerticalImage} alt="Vertical" className="w-full h-auto rounded-md cursor-pointer" onClick={() => openPopup(VerticalImage)} />
@@ -28,13 +36,12 @@ const ParcGrotte = () => {
             <img src={SquareImage2} alt="Square2" className="w-1/2 h-auto rounded-md cursor-pointer" onClick={() => openPopup(SquareImage2)} />
           </div>
         </div>
-        <div className="w-full md:w-2/3 flex flex-col gap-6">
+        <div className="w-full md:w-2/3 flex flex-col gap-3">
         <h2 className="text-2xl font-bold text-orange-500">Exploration Spéléologique et Découverte Naturelle dans les Cévennes</h2>
-<p>La région des Cévennes offre une richesse naturelle exceptionnelle, avec ses parcs naturels, ses grottes mystérieuses et ses paysages époustouflants. Explorez les profondeurs de la terre et découvrez les merveilles cachées dans les grottes secrètes de la région. Plongez dans un monde souterrain fascinant, où stalactites et stalagmites créent un spectacle naturel unique.</p>
-<p>Les parcs naturels des Cévennes sont des joyaux de biodiversité, abritant une flore et une faune variées. Randonnez à travers des forêts luxuriantes, longez des rivières cristallines et découvrez des vallées verdoyantes à perte de vue. Imprégnez-vous de la beauté sauvage de ces paysages préservés, où chaque coin révèle une nouvelle merveille de la nature.</p>
-<p>Les panoramas spectaculaires des Cévennes vous couperont le souffle. Des sommets majestueux aux vallées verdoyantes, chaque vue offre une vision de la beauté naturelle à son état pur. Explorez des sentiers sinueux qui serpentent à travers des paysages à couper le souffle et découvrez des panoramas à couper le souffle à chaque tournant.</p>
-<p>Que vous soyez un amateur de plein air ou un aventurier en herbe, les Cévennes vous offrent une expérience unique de découverte et d'émerveillement. Explorez les mystères de la terre dans les grottes secrètes de la région et laissez-vous séduire par la splendeur naturelle des parcs préservés des Cévennes.</p>
-
+          <p>La région des Cévennes offre une richesse naturelle exceptionnelle, avec ses parcs naturels, ses grottes mystérieuses et ses paysages époustouflants. Explorez les profondeurs de la terre et découvrez les merveilles cachées dans les grottes secrètes de la région. Plongez dans un monde souterrain fascinant, où stalactites et stalagmites créent un spectacle naturel unique.</p>
+          <p>Les parcs naturels des Cévennes sont des joyaux de biodiversité, abritant une flore et une faune variées. Randonnez à travers des forêts luxuriantes, longez des rivières cristallines et découvrez des vallées verdoyantes à perte de vue. Imprégnez-vous de la beauté sauvage de ces paysages préservés, où chaque coin révèle une nouvelle merveille de la nature.</p>
+          <p>Les panoramas spectaculaires des Cévennes vous couperont le souffle. Des sommets majestueux aux vallées verdoyantes, chaque vue offre une vision de la beauté naturelle à son état pur. Explorez des sentiers sinueux qui serpentent à travers des paysages à couper le souffle et découvrez des panoramas à couper le souffle à chaque tournant.</p>
+          <p>Que vous soyez un amateur de plein air ou un aventurier en herbe, les Cévennes vous offrent une expérience unique de découverte et d'émerveillement. Explorez les mystères de la terre dans les grottes secrètes de la région et laissez-vous séduire par la splendeur naturelle des parcs préservés des Cévennes.</p>
         </div>
       </div>
       <div className="flex flex-col gap-4">

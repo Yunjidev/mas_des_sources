@@ -3,6 +3,7 @@ import { useState } from 'react';
 import VerticalImage from '../../assets/Loisirs/Rando/rando1.jpg';
 import SquareImage1 from '../../assets/Loisirs/Rando/rando2.jpg';
 import SquareImage2 from '../../assets/Loisirs/Rando/rando3.jpg';
+import { Link } from 'react-router-dom';
 
 const LoisirsCard = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,13 @@ const LoisirsCard = () => {
 
   return (
     <div className="max-w-7xl mx-auto bg-white shadow-lg p-6 flex flex-col gap-7 mb-10 mt-10">
+      <div className="flex flex-col gap-4">
+        <div className="flex gap-4 justify-center">
+          <Link to="/activités-aquatique" className="text-blue-600 hover:text-blue-800 visited:text-blue-700">Activités Aquatiques</Link>
+          <Link to="/chateaux-musées" className="text-blue-600 hover:text-blue-800 visited:text-blue-700">Châteaux et Musées</Link>
+          <Link to="/parc-grotte" className="text-blue-600 hover:text-blue-800 visited:text-blue-700">Parcs et Grottes</Link>
+        </div>
+      </div>
       <div className="flex flex-col md:flex-row gap-6">
         <div className="w-full md:w-1/3 flex flex-col gap-4">
           <img src={VerticalImage} alt="Vertical" className="w-full h-auto rounded-md cursor-pointer" onClick={() => openPopup(VerticalImage)} />

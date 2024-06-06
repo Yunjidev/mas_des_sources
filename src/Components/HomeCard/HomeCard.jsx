@@ -18,7 +18,7 @@ const Cards = () => {
         image={Imgcard2} 
         title="Les Loisirs" 
         text="Explorez notre région et découvrez les loisirs." 
-        link="/environs" 
+        link="/randonnée" 
       />
       <Card 
         image={Imgcard3} 
