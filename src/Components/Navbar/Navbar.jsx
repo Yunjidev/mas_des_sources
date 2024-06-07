@@ -60,16 +60,10 @@ const Navbar = () => {
               <div className={`${isDropdownOpen ? "block" : "hidden"} absolute z-10 font-normal bg-gray-800 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600`}>
                 <ul className="py-2 text-sm text-white dark:text-gray-200" aria-labelledby="dropdownLargeButton">
                   <li>
-                    <Link to="#" className="block px-4 py-2 hover:text-orange-500 dark:hover:text-orange-500">Nos bons cadeaux</Link>
+                    <Link to="/réservation-coffret-cadeaux-conditions-annulations" className="block px-4 py-2 hover:text-orange-500 dark:hover:text-orange-500">Infos, Réservations & Annulations</Link>
                   </li>
                   <li>
-                    <Link to="#" className="block px-4 py-2 hover:text-orange-500 dark:hover:text-orange-500">Conditions Annulations</Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:text-orange-500 dark:hover:text-orange-500">Réservations et infos</Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:text-orange-500 dark:hover:text-orange-500">Liens utiles</Link>
+                    <Link to="/liens-utiles" className="block px-4 py-2 hover:text-orange-500 dark:hover:text-orange-500">Liens utiles</Link>
                   </li>
                 </ul>
               </div>

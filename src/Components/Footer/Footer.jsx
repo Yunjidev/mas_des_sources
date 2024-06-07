@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { IoLogoFacebook } from 'react-icons/io5';
 import { FaTripadvisor } from "react-icons/fa";
 import { TbBrandBooking } from "react-icons/tb";
@@ -14,19 +15,19 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between items-center">
           <div className="mb-6 md:mb-0 flex items-center">
-            <a href="#" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img src={Logo} className="h-12 me-3" alt="Mas arbre de vie Logo" />
               <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                 <span className="text-white">Mas des Sources</span> - <span className="text-orange-500">Cévénol</span>
               </span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-3 gap-8">
             <div>
               <h2 className="mb-6 text-sm font-semibold text-orange-500 uppercase dark:text-white">Réservations</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">Liens</a>
+                  <Link to="/liens-utiles" className="hover:underline">Liens</Link>
                 </li>
                 <li>
                   <a href="https://www.booking.com/hotel/fr/au-mas-cevenol.fr.html" className="hover:underline">Booking</a>
@@ -48,10 +49,10 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold text-orange-500 uppercase dark:text-white">Légal</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="/legal" className="hover:underline">Mentions Légales</a>
+                  <Link to="/legal" className="hover:underline">Mentions Légales</Link>
                 </li>
                 <li>
-                  <a href="/privacy-policy" className="hover:underline">Politique de confidentialité</a>
+                  <Link to="/privacy-policy" className="hover:underline">Politique de confidentialité</Link>
                 </li>
               </ul>
             </div>

@@ -20,7 +20,7 @@ const Aquatique = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto bg-white shadow-lg p-6 flex flex-col gap-7 mb-10 mt-28">
+    <div className="max-w-8xl mx-auto p-6 flex flex-col gap-7 mb-10 mt-28">
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 justify-center">
           <Link to="/randonnée" className="text-blue-600 hover:text-blue-800 visited:text-blue-700">Randonnée</Link>

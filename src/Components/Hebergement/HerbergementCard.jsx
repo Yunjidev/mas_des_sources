@@ -167,14 +167,14 @@ const HebergementCard = ({ data }) => {
           </ul>
         </div>
         <div
-          className={`hover:bg-orange-500 hover:bg-opacity-70 transition-all duration-300`}
-          style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}
-        >
-          <hr className="w-full border border-gray-800 mb-2" />
-          <div className="flex flex-col justify-end items-center p-4">
-            <span className="text-black font-medium">Plus d'infos</span>
-          </div>
-        </div>
+  className={`hover:bg-orange-500 hover:bg-opacity-70 transition-all duration-300 ${isCardHovered?'scale-105' : ''}`}
+  style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}
+>
+<hr className="w-full border border-gray-800 mb-2 hidden sm:block" />
+  <div className="flex flex-col justify-end items-center p-4">
+    <span className="text-black font-medium">Voir + d'infos</span>
+  </div>
+</div>
       </div>
     </Link>
   );

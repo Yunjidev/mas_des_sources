@@ -20,6 +20,8 @@ import Rando from './Pages/Loisirs/Rando';
 import Chateau from './Pages/Loisirs/Chateaux';
 import Aquatique from './Components/LoisirsCards/Aquatique';
 import ParcGrotte from './Pages/Loisirs/ParcGrotte';
+import Annulation from './Pages/Annulation/Annulation';
+import Link from './Pages/Link/Link';
 function MainLayout({ children }) {
   return (
     <>
@@ -51,6 +53,8 @@ function App() {
         <Route path="/chateaux-musées" element={<MainLayout><Chateau /></MainLayout>} />
         <Route path="/activités-aquatique" element={<MainLayout><Aquatique /></MainLayout>} />
         <Route path="/parc-grotte" element={<MainLayout><ParcGrotte /></MainLayout>} />
+        <Route path="/réservation-coffret-cadeaux-conditions-annulations" element={<MainLayout><Annulation /></MainLayout>} />
+        <Route path="/liens-utiles" element={<MainLayout><Link /></MainLayout>} />
       </Routes>
     </Router>
   );
