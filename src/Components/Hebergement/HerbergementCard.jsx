@@ -136,7 +136,7 @@ const HebergementCard = ({ data }) => {
       >
         <img src={image} alt={title} className="w-full object-cover" />
         <div className="p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 text-center">
-          <h2 className="text-xl font-bold">{title}</h2>
+          <h2 className="text-xl font-bold text-orange-500">{title}</h2>
           <p className="text-gray-700 mb-3">{description}</p>
           <ul className="flex flex-col items-center space-y-2 pb-4">
             <li className="flex items-center font-bold">
