@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // Section 1 : Description
-import IMG from '../../assets/ImgCard/tilleul.jpg';
+import IMG from '../../assets/Chataignier/10.jpg';
 
 export default function Section01() {
   return (

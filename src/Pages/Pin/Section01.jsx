@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // Section 1 : Description
-import IMG from '../../assets/ImgCard/tilleul.jpg';
+import IMG from '../../assets/Chambre/3.jpg';
 
 export default function Section01() {
   return (
@@ -10,7 +10,7 @@ export default function Section01() {
           <h3 className="text-3xl md:text-4xl lg:text-5xl mb-8 relative w-fit">
             <span className="text-orange-500">Le Mas des Sources</span>
             <br />
-            Location Le Pin
+            Le Pin ( Tilleul + Châtaignier + Chambre d'hôte)
             <span className="block h-1 bg-orange-500 transform scale-x-0 origin-bottom-right transition-transform duration-150 ease-out hover:scale-x-100 origin-bottom-left absolute bottom-0 left-0"></span>
           </h3>
           <p className="tracking-wide text-sm md:text-base lg:text-lg pb-4">
@@ -43,7 +43,7 @@ export default function Section01() {
         <img
           src={IMG}
           alt="Description"
-          className="max-w-[1000px] w-full"
+          className="max-w-[550px] w-full"
         />
       </div>
     </section>

@@ -1,13 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
-import Img1 from '../../assets/ImgCard/tilleul.jpg';
-import Img2 from '../../assets/ImgCard/camelia.jpg';
-import Img3 from '../../assets/ImgCard/chataignier.jpg';
-import Img4 from '../../assets/ImgCard/chene.jpg';
-import Img5 from '../../assets/ImgCard/pin.jpg';
+import Img1 from '../../assets/Camelia/1.jpg';
+import Img2 from '../../assets/Camelia/2.jpg';
+import Img3 from '../../assets/Camelia/3.jpg';
+import Img4 from '../../assets/Camelia/4.jpg';
+import Img5 from '../../assets/Camelia/5.jpg';
+import Img6 from '../../assets/Camelia/6.jpg';
+
 
 const Carousel = () => {
-  const images = [Img1, Img2, Img3, Img4, Img5];
+  const images = [Img1, Img2, Img3, Img4, Img5, Img6];
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);

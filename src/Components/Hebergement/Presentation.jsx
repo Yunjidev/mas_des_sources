@@ -4,7 +4,7 @@ import IMG from "/src/assets/Gallery/gallery10.jpg";
 
 export default function Section01() {
   return (
-    <section className="flex flex-col md:flex-row justify-between max-w-[85vw] mx-auto mb-[5%] mt-16" id="sectionZero">
+    <section className="flex flex-col md:flex-row justify-between max-w-[85vw] mx-auto mb-[5%] mt-20" id="sectionZero">
       <div className="flex-1 flex flex-col items-center justify-center gap-8 p-4">
         <div className="flex flex-col justify-center max-w-[1000px]">
           <h3 className="text-3xl md:text-4xl lg:text-5xl mb-8 relative w-fit">

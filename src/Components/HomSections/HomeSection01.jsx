@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // Section00.jsx
-import IMG from "/src/assets/mas.jpg";
+import IMG from "/src/assets/mas3.jpg";
 
 export default function Section01() {
   return (

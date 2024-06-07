@@ -41,7 +41,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
+    <div className="container mx-auto px-5 py-2 lg:px-22 lg:pt-12 mt-12">
       <div className="-m-1 flex flex-wrap md:-m-2">
         <div className="flex w-1/2 flex-wrap">
           {images.slice(0, 3).map((image, index) => (

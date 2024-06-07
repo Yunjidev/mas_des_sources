@@ -20,7 +20,7 @@ const LoisirsCard = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto bg-white shadow-lg p-6 flex flex-col gap-7 mb-10 mt-10">
+    <div className="max-w-7xl mx-auto bg-white shadow-lg p-6 flex flex-col gap-7 mb-10 mt-28">
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 justify-center">
           <Link to="/activités-aquatique" className="text-blue-600 hover:text-blue-800 visited:text-blue-700">Activités Aquatiques</Link>

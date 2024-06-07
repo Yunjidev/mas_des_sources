@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { IoMail, IoPaperPlane, IoPerson, IoLocation, IoCall } from 'react-icons/io5';
 
-import BG from '/src/assets/mas3.jpg';
-import OverlayImage from '/src/assets/logo.png'; // Ajoutez l'image à superposer
+import BG from '/src/assets/mas.jpg';
+import OverlayImage from '/src/assets/logo2.png';
 
 const Hero = () => {
   const [showContactModal, setShowContactModal] = useState(false);
@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="relative bg-cover bg-center h-[800px] flex items-center"
+        className="relative bg-cover bg-center h-[700px] flex items-center"
         style={{
           backgroundImage: `url(${BG})`,
         }}

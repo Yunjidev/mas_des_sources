@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // Section 3 : Prix et Formules
-import IMG from '../../assets/ImgCard/tilleul.jpg';
+import IMG from '../../assets/Chambre/9.jpg';
 
 export default function Section03() {
   return (
@@ -40,7 +40,7 @@ export default function Section03() {
         <img
           src={IMG}
           alt="Description"
-          className="max-w-[1000px] w-full"
+          className="max-w-[500px] w-full"
         />
       </div>
     </section>

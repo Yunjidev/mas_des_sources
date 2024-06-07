@@ -1,8 +1,9 @@
-import {IoLogoFacebook } from 'react-icons/io5';
+import { IoLogoFacebook } from 'react-icons/io5';
 import { FaTripadvisor } from "react-icons/fa";
 import { TbBrandBooking } from "react-icons/tb";
 import { IoIosGift } from "react-icons/io";
 import Logo from '/src/assets/logo.png';
+
 const Footer = () => {
   const getCurrentYear = () => {
     return new Date().getFullYear();
@@ -20,7 +21,7 @@ const Footer = () => {
               </span>
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-3 gap-8">
             <div>
               <h2 className="mb-6 text-sm font-semibold text-orange-500 uppercase dark:text-white">Réservations</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -69,7 +70,7 @@ const Footer = () => {
               <span className="sr-only">Wonderbox</span>
             </a>
             <a href="https://www.booking.com/hotel/fr/au-mas-cevenol.fr.html" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-              <TbBrandBooking  className="w-4 h-4" />
+              <TbBrandBooking className="w-4 h-4" />
               <span className="sr-only">Booking</span>
             </a>
             <a href="https://www.tripadvisor.fr/Hotel_Review-g13287885-d11871181-Reviews-Mas_Des_Sources_Cevenol-Chambon_Gard_Occitanie.html" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // Section 2 : Commodités et Extérieurs
-import IMG from '../../assets/ImgCard/tilleul.jpg';
+import IMG from '../../assets/Chambre/4.jpg';
 
 export default function Section02() {
   return (
@@ -34,7 +34,7 @@ export default function Section02() {
         <img
           src={IMG}
           alt="Description"
-          className="max-w-[1000px] w-full"
+          className="max-w-[500px] w-full"
         />
       </div>
     </section>

@@ -7,7 +7,7 @@ import Imgcard3 from '../../assets/champi.jpg';
 
 const Cards = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <Card 
         image={Imgcard1} 
         title="Nos hébergements" 
@@ -34,8 +34,8 @@ const Card = ({ image, title, text, link }) => {
   return (
     <Link 
       to={link} 
-      className="group hover:shadow-lg rounded-lg overflow-hidden relative" 
-      style={{ width: '400px', height: '700px', margin: '20px auto' }} 
+      className="group hover:shadow-lg rounded-lg overflow-hidden relative w-full sm:w-80 md:w-96 mx-auto" 
+      style={{ height: '700px' }}
     >
       <div className="w-full h-full relative">
         <img src={image} alt={title} className="w-full h-full object-cover" />

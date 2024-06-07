@@ -106,55 +106,74 @@ const hebergementData = [
 
 const HebergementCard = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isCardHovered, setIsCardHovered] = useState(false);
 
   const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => setIsHovered(false);
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setIsCardHovered(false);
+  };
+
+  const handleCardMouseEnter = () => setIsCardHovered(true);
+  const handleCardMouseLeave = () => setIsCardHovered(false);
 
   const { image, title, description, people, Hs, Bs, wifi, bedrooms, link } = data;
 
   return (
     <Link
       to={link}
-      className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 overflow-hidden rounded-lg shadow-md mb-4 ml-4 mr-4 relative flex flex-col items-stretch sm:mr-4"
+      className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 overflow-hidden rounded-lg shadow-md mb-12 ml-4 mr-4 relative flex flex-col items-stretch sm:mr-4"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      style={{
+        transform: isCardHovered ? 'scale(1.05)' : 'scale(1)',
+        transition: 'transform 0.3s ease-in-out',
+      }}
     >
-      <img src={image} alt={title} className="w-full object-cover" />
-      <div className="p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 text-center">
-        <h2 className="text-xl font-bold">{title}</h2>
-        <p className="text-gray-700 mb-3">{description}</p>
-        <ul className="flex flex-col items-center space-y-2 pb-4">
-          <li className="flex items-center font-bold">
-            <FaUsers size={22} />
-            <span className="ml-2">{people}</span>
-          </li>
-          <li className="flex items-center font-bold">
-            <BsGraphUpArrow size={32} color='green' />
-            <span className="ml-2">{Hs}</span>
-          </li>
-          <li className="flex items-center font-bold">
-            <BsGraphDownArrow size={32} color='red' />
-            <span className="ml-2">{Bs}</span>
-          </li>
-          <li className="flex items-center font-bold">
-            <FaKitchenSet size={22} />
-            <span className="ml-2">{wifi ? 'Oui' : 'Non'}</span>
-          </li>
-          <li className="flex items-center font-bold">
-            <FaBed size={22} />
-            <span className="ml-2">{bedrooms}</span>
-          </li>
-          <li className="flex items-center space-x-4 font-bold">
-            <PiTelevisionFill size={32} />
-            <FaWifi size={32} />
-            <MdBathroom size={32} />
-          </li>
-        </ul>
-      </div>
-      <div className={`hover:bg-orange-300 hover:bg-opacity-70 transition-all duration-300`} style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-        <hr className="w-full border border-gray-800 mb-2" />
-        <div className="flex flex-col justify-end items-center p-4">
-          <span className="text-black font-medium">Plus d'infos</span>
+      <div
+        onMouseEnter={handleCardMouseEnter}
+        onMouseLeave={handleCardMouseLeave}
+      >
+        <img src={image} alt={title} className="w-full object-cover" />
+        <div className="p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 text-center">
+          <h2 className="text-xl font-bold">{title}</h2>
+          <p className="text-gray-700 mb-3">{description}</p>
+          <ul className="flex flex-col items-center space-y-2 pb-4">
+            <li className="flex items-center font-bold">
+              <FaUsers size={22} />
+              <span className="ml-2">{people}</span>
+            </li>
+            <li className="flex items-center font-bold">
+              <BsGraphUpArrow size={32} color="green" />
+              <span className="ml-2">{Hs}</span>
+            </li>
+            <li className="flex items-center font-bold">
+              <BsGraphDownArrow size={32} color="red" />
+              <span className="ml-2">{Bs}</span>
+            </li>
+            <li className="flex items-center font-bold">
+              <FaKitchenSet size={22} />
+              <span className="ml-2">{wifi ? 'Oui' : 'Non'}</span>
+            </li>
+            <li className="flex items-center font-bold">
+              <FaBed size={22} />
+              <span className="ml-2">{bedrooms}</span>
+            </li>
+            <li className="flex items-center space-x-4 font-bold">
+              <PiTelevisionFill size={32} />
+              <FaWifi size={32} />
+              <MdBathroom size={32} />
+            </li>
+          </ul>
+        </div>
+        <div
+          className={`hover:bg-orange-500 hover:bg-opacity-70 transition-all duration-300`}
+          style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}
+        >
+          <hr className="w-full border border-gray-800 mb-2" />
+          <div className="flex flex-col justify-end items-center p-4">
+            <span className="text-black font-medium">Plus d'infos</span>
+          </div>
         </div>
       </div>
     </Link>

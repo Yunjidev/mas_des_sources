@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // Section 3 : Prix et Formules
-import IMG from '../../assets/ImgCard/tilleul.jpg';
+import IMG from '../../assets/Chambre/7.jpg';
 
 export default function Section03() {
   return (

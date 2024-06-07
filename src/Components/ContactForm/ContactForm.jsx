@@ -26,7 +26,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${Background})`, height: "80vh"}}>
+    <section className="bg-cover bg-center bg-no-repeat min-h-screen" style={{ backgroundImage: `url(${Background})` }}>
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-xl">
         <div className="w-full bg-indigo-200 hover:bg-indigo-300 dark:bg-gray-800 rounded-lg shadow-lg p-8 opacity-80"> {/* Ajout de l'opacité à la carte */}
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Contactez-nous</h2>

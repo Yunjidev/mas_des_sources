@@ -1,13 +1,28 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
-import Img1 from '../../assets/ImgCard/tilleul.jpg';
-import Img2 from '../../assets/ImgCard/camelia.jpg';
-import Img3 from '../../assets/ImgCard/chataignier.jpg';
-import Img4 from '../../assets/ImgCard/chene.jpg';
-import Img5 from '../../assets/ImgCard/pin.jpg';
+import Img1 from '../../assets/Chataignier/1.jpg';
+import Img2 from '../../assets/Chataignier/2.jpg';
+import Img3 from '../../assets/Chataignier/3.jpg';
+import Img4 from '../../assets/Chataignier/4.jpg';
+import Img5 from '../../assets/Chataignier/5.jpg';
+import Img6 from '../../assets/Chataignier/6.jpg';
+import Img7 from '../../assets/Chataignier/7.jpg';
+import Img8 from '../../assets/Chataignier/8.jpg';
+import Img9 from '../../assets/Chataignier/9.jpg';
+import Img10 from '../../assets/Chataignier/10.jpg';
+import Img11 from '../../assets/Chataignier/11.jpg';
+import Img12 from '../../assets/Chambre/1.jpg';
+import Img13 from '../../assets/Chambre/2.jpg';
+import Img14 from '../../assets/Chambre/3.jpg';
+import Img15 from '../../assets/Chambre/4.jpg';
+import Img16 from '../../assets/Chambre/5.jpg';
+import Img17 from '../../assets/Chambre/6.jpg';
+import Img18 from '../../assets/Chambre/7.jpg';
+
+
 
 const Carousel = () => {
-  const images = [Img1, Img2, Img3, Img4, Img5];
+  const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15, Img16, Img17, Img18];
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);

@@ -7,7 +7,7 @@ import Section03 from './Section03';
 const TilleulPage = () => {
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold my-8 text-center">Le Tilleul</h1>
+      <h1 className="text-3xl font-bold my-8 text-center text-orange-500 ">Le Tilleul</h1>
       <Carrousel /> 
       <TilleulDetails />
       <Section01 />

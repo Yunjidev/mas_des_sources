@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // Section 2 : Commodités et Extérieurs
-import IMG from '../../assets/ImgCard/tilleul.jpg';
+import IMG from '../../assets/Chataignier/5.jpg';
 
 export default function Section02() {
   return (
