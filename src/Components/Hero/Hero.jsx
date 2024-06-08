@@ -28,9 +28,9 @@ const Hero = () => {
             <h1 className="text-4xl text-black font-bold leading-tight sm:text-5xl">
               MAS DES SOURCES
               <span className="text-black"> - </span> 
-              <span className="text-orange-500 pl-2">Cévénol</span> {/* Ajustement de la marge gauche */}
+              <span className="text-orange-500 pl-2">Cévénol</span>
             </h1>
-            <p className="text-white text-left font-semibold mt-8 mb-12 text-3xl">
+            <p className="text-gray-800 text-left font-semibold mt-8 mb-12 text-3xl">
               Location de gîtes et chambre d'hôte dans les Cévennes.
             </p>
             <div className="flex justify-center items-center">
