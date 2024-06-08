@@ -3,7 +3,7 @@
 import { Link } from 'react-router-dom';
 import Imgcard1 from '../../assets/card.jpg'; // Remplacez par les chemins de vos images de carte
 import Imgcard2 from '../../assets/loisirs.jpg';
-import Imgcard3 from '../../assets/champi.jpg';
+import Imgcard3 from '../../assets/Gallery/gallery4.jpg';
 
 const Cards = () => {
   return (
@@ -22,8 +22,8 @@ const Cards = () => {
       />
       <Card 
         image={Imgcard3} 
-        title="Balades en forêt" 
-        text="Partez à la cueillette de champignons" 
+        title="Réservations et Annulations" 
+        text="Conditions Générales et Informations" 
         link="/services" 
       />
     </div>
