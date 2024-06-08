@@ -3,7 +3,7 @@ import { FaLink } from 'react-icons/fa';
 
 const UsefulLinks = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen mt-20">
       <div className="max-w-7xl mx-auto mt-22 mb-12">
         <h1 className="text-2xl font-bold text-center text-orange-500 mb-6">LIENS UTILES</h1>
 

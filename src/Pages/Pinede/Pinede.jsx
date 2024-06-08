@@ -7,8 +7,8 @@ import Section03 from './Section03';
 
 const PinedePage = () => {
   return (
-    <div className="container mx-auto">
-      <h1 className="text-3xl font-bold my-8 text-center">Chambre d'hôte la Pinède</h1>
+    <div className="container mx-auto mt-32">
+      <h1 className="text-3xl font-bold my-8 text-center text-orange-500 ">Chambre d'hôte la Pinède</h1>
       <Carrousel /> 
       <TilleulDetails />
       <Section01 />

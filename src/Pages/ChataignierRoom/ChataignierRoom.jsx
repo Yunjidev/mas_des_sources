@@ -6,8 +6,8 @@ import Section03 from './Section03';
 
 const ChataignierRoomPage = () => {
   return (
-    <div className="container mx-auto">
-      <h1 className="text-3xl font-bold my-8 text-center">Mas le Châtaignier + Chambre</h1>
+    <div className="container mx-auto mt-32">
+      <h1 className="text-3xl font-bold my-8 text-center text-orange-500 ">Mas le Châtaignier + Chambre</h1>
       <Carrousel /> 
       <TilleulDetails />
       <Section01 />

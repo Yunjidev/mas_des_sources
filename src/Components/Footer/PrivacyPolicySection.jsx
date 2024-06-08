@@ -2,7 +2,7 @@
 
 const PrivacyPolicySection = () => {
   return (
-    <section className="container mx-auto mt-8 mb-32">
+    <section className="container mx-auto mt-32 mb-32">
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h1 className="text-3xl font-bold mb-6">Politique de Confidentialité</h1>
         <article>

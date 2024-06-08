@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Img1 from '../../assets/Chambre/1.jpg';
 import Img2 from '../../assets/Chambre/2.jpg';
 import Img3 from '../../assets/Chambre/3.jpg';
@@ -10,13 +10,14 @@ import Img7 from '../../assets/Chambre/7.jpg';
 import Img8 from '../../assets/Chambre/8.jpg';
 import Img9 from '../../assets/Chambre/9.jpg';
 
-
 const Carousel = () => {
   const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9];
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState([]);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -52,10 +53,28 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % loadedImages.length);
-    }, 3000); // Change image every 3 seconds
+    }, 5000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
   }, [loadedImages.length]);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.changedTouches[0].screenX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.changedTouches[0].screenX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % loadedImages.length); // Swipe left
+    }
+
+    if (touchStartX.current - touchEndX.current < -50) {
+      setActiveIndex((prevIndex) => (prevIndex - 1 + loadedImages.length) % loadedImages.length); // Swipe right
+    }
+  };
 
   if (loadedImages.length === 0) {
     return <div>Chargement des images...</div>;
@@ -63,7 +82,14 @@ const Carousel = () => {
 
   return (
     <div>
-      <div id="default-carousel" className="relative w-full" data-carousel="slide">
+      <div
+        id="default-carousel"
+        className="relative w-full"
+        data-carousel="slide"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {/* Carousel wrapper */}
         <div className="relative h-96 overflow-hidden rounded-lg md:h-[600px]">
           {loadedImages.map((image, index) => (

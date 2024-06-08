@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Img1 from '../../assets/Chataignier/1.jpg';
 import Img2 from '../../assets/Chataignier/2.jpg';
 import Img3 from '../../assets/Chataignier/3.jpg';
@@ -12,13 +12,14 @@ import Img9 from '../../assets/Chataignier/9.jpg';
 import Img10 from '../../assets/Chataignier/10.jpg';
 import Img11 from '../../assets/Chataignier/11.jpg';
 
-
 const Carousel = () => {
   const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11];
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState([]);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -54,10 +55,31 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % loadedImages.length);
-    }, 3000); // Change image every 3 seconds
+    }, 5000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
   }, [loadedImages.length]);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.changedTouches[0].screenX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX.current = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+  };
+
+  const handleSwipeGesture = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      // Swiped left
+      setActiveIndex((prevIndex) => (prevIndex + 1) % loadedImages.length);
+    }
+
+    if (touchEndX.current - touchStartX.current > 50) {
+      // Swiped right
+      setActiveIndex((prevIndex) => (prevIndex - 1 + loadedImages.length) % loadedImages.length);
+    }
+  };
 
   if (loadedImages.length === 0) {
     return <div>Chargement des images...</div>;
@@ -65,7 +87,13 @@ const Carousel = () => {
 
   return (
     <div>
-      <div id="default-carousel" className="relative w-full" data-carousel="slide">
+      <div
+        id="default-carousel"
+        className="relative w-full"
+        data-carousel="slide"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {/* Carousel wrapper */}
         <div className="relative h-96 overflow-hidden rounded-lg md:h-[600px]">
           {loadedImages.map((image, index) => (
