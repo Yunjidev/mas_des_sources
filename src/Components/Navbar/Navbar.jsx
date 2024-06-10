@@ -42,10 +42,11 @@ const Navbar = () => {
     };
   }, []);
 
-  // Close dropdowns when navigating to a new page
+  // Close dropdowns and menu when navigating to a new page
   useEffect(() => {
     setIsDropdownOpen(false);
     setIsDropdownOpen2(false);
+    setIsOpen(false);
   }, [location]);
 
   return (
