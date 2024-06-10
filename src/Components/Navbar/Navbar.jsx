@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from "/src/assets/logo.png";
 
 const Navbar = () => {
@@ -7,16 +7,24 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
 
+  const location = useLocation();
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+    if (!isDropdownOpen) {
+      setIsDropdownOpen2(false);
+    }
   };
 
   const toggleDropdown2 = () => {
     setIsDropdownOpen2(!isDropdownOpen2);
+    if (!isDropdownOpen2) {
+      setIsDropdownOpen(false);
+    }
   };
 
   // Close dropdowns when clicking outside
@@ -33,6 +41,12 @@ const Navbar = () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, []);
+
+  // Close dropdowns when navigating to a new page
+  useEffect(() => {
+    setIsDropdownOpen(false);
+    setIsDropdownOpen2(false);
+  }, [location]);
 
   return (
     <nav className="bg-gray-800 border-gray-200 dark:bg-gray-800 dark:border-gray-700 fixed top-0 left-0 w-full z-10">
