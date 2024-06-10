@@ -12,6 +12,7 @@
   "dependencies": {
     "@material-tailwind/react": "^2.1.9",
     "alpine": "^0.2.1",
+    "axios": "^1.7.2",
     "flowbite": "^2.3.0",
     "gsap": "^3.12.5",
     "react": "^18.2.0",

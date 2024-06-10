@@ -24,7 +24,7 @@ const Cards = () => {
         image={Imgcard3} 
         title="Réservations et Annulations" 
         text="Conditions Générales et Informations" 
-        link="/services" 
+        link="/réservation-coffret-cadeaux-conditions-annulations" 
       />
     </div>
   );
