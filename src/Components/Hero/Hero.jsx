@@ -23,6 +23,7 @@ const Hero = () => {
           backgroundImage: `url(${BG})`,
         }}
       >
+        <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm"></div>
         <div className="container mx-auto flex flex-col items-start justify-center h-full relative pl-12">
           <div className="w-11/12 sm:w-2/3 lg:flex justify-start items-start flex-col mb-5 sm:mb-10">
             <h1 className="text-4xl text-black font-bold leading-tight sm:text-5xl">

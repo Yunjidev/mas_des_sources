@@ -85,7 +85,7 @@ const ReservationConditions = () => {
             Toute personne arrivant à l'improviste avec un animal sera prier de le faire garder dans un refuge voici un lien :
           </p>
           <p className="mb-2">
-            <a href="http://locationgard.jimdo.com/" className="text-blue-500">http://www.ongardevosanimaux.com/dogsitter/classement-region.html</a><br/>
+            <a href="https://mas-des-sources.vercel.app/" className="text-blue-500">http://www.ongardevosanimaux.com/dogsitter/classement-region.html</a><br/>
           </p>
           <p>
             Pour vos cadeaux de Noël offrez un séjour au mas des sources pour faire découvrir les trésors qui se cache derrière chaque vallée à vos proches et vos amis.
