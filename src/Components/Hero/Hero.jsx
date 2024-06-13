@@ -47,7 +47,7 @@ const Hero = () => {
         <img
           src={OverlayImage}
           alt="Overlay"
-          className="object-cover w-96 h-96 absolute right-96 top-1/2 transform -translate-y-1/2"
+          className="object-cover w-96 h-96 absolute right-96 top-1/2 transform -translate-y-1/2 hidden md:block"
         />
       </div>
       {showContactModal && (
